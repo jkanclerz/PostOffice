@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from flask import Flask, render_template, request, redirect, url_for
 import json
 import config
@@ -19,7 +22,7 @@ app = Flask(__name__)
 def index():
   my_name = 'Jakub'
   return render_template('partials/index.html',
-    my_name=my_name, 
+    my_name=my_name,
   )
 
 @app.route("/send", methods=['POST'])
